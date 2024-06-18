@@ -1,0 +1,229 @@
+---
+title: "Title: template"
+subtitle: "Astrid Thébault Guiochon, ..., Hakim Djeriouat </br><i>Study of Cognitive Mechanisms (EMC) Laboratory</i>"
+# ─── Authors ───
+authors: 
+  - name: Astrid Thébault Guiochon
+    email: a.thebaultguiochon@univ-lyon2.fr
+    orcid: 0009-0007-8941-0143
+    url: https://emc.univ-lyon2.fr/equipes/neurocognition-criminalite-ncc/thebault-guiochon-astrid
+
+# ─── Format ───
+format: 
+ html:
+    theme:
+      light: "themes/as.scss"
+      dark: "themes/as-dark.scss"
+    # ─── Sections ───
+    number-sections: true
+    number-depth: 3
+    # ─── Table of contents ───
+    toc: true
+    toc_float: true
+    # ─── Output ───
+    embed-resources: true
+    code-fold: true
+    # ─── Figures ───
+    fig-align: "center"
+    fig-cap-location: "top"
+    tbl-theme: "center"
+    # ─── Banner ───
+    title-block-banner: "#B7A0CD"
+# ─── Dark mode ───
+lightbox: true
+# ─── Informations ───
+date-modified: last-modified
+date-format: long
+# ─── Execution ───
+execute: 
+  message: false
+  warning: false
+execute-dir: project 
+output-dir: _outputs
+# ─── Bibliography ───
+bibliography: 
+  - "references/references.bib"
+  - "references/packages.bib"
+nocite: |
+  @*
+csl: 
+  "references/apa.csl"
+---
+::: callout-note
+### Description
+
+In this study, we aim to ..
+:::
+
+# Setup
+
+## Packages
+
+```{r}
+#| label: setup
+#| code-summary: Packages
+#| code-fold: true
+#| output: false 
+
+# ─── Correlation Matrix ───
+
+if (!require("correlation")) {
+    install.packages("correlation")
+}
+library(correlation)            
+# ─── Data Manipulation ───
+if (!require("dplyr")) {
+    install.packages("dplyr")
+}
+library(dplyr)                  
+
+# ─── JS Data Table ───
+if (!require("DT")) {
+    install.packages("DT")
+}
+library(DT)
+
+# ─── Plotting ───
+if (!require("ggplot2")) {
+    install.packages("ggplot2")
+}
+library(ggplot2) 
+source("./themes/improper-prior-ggtheme.R")
+
+# ─── Rendering ───
+if (!require("knitr")) {
+    install.packages("knitr")
+}
+library(knitr)
+
+# ─── Label Data ───
+if (!require("labelled")) {
+    install.packages("labelled")
+}
+
+# ─── 3D Data Visualization ───
+if (!require("rgl")) {
+    install.packages("rgl")
+}
+library(rgl) 
+knitr::knit_hooks$set(webgl = hook_webgl)
+
+# ─── Dataframes Manipulation ───
+if (!require("tibble")) {
+    install.packages("tibble")
+}
+library(tibble) 
+
+# ─── Data Tidying ───
+if (!require("tidyr")) {
+    install.packages("tidyr")
+}
+library(tidyr) 
+
+# ─── Data Manipulation ───
+# Includes ggplot2, dplyr, tidyr, readr, tibble, stringr, forcats
+# if (!require("tidyverse")) {
+#     install.packages("tidyverse")
+# }
+# library(tidyverse)
+```
+
+## References
+
+```{r}
+#| label: refs
+#| code-summary: "References"
+#| code-fold: true 
+#| output: false 
+
+knitr::write_bib(c(.packages()), 
+                 file = "references/packages.bib")
+```
+
+# Project
+
+## Preregistration
+
+### Study Information
+
+#### Hypotheses
+
+### Design Plan
+
+#### Study Type
+
+Experiment - A researcher randomly assigns treatments to study subjects, this includes field or lab experiments. This is also known as an intervention experiment and includes randomized controlled trials.
+
+#### Binding
+
+No blinding is involved in this study.
+
+#### Is there any additional blinding in this study?
+
+/
+
+#### Study design
+
+
+#### Stimuli validation
+
+/
+
+#### Randomization
+
+### Sampling Plan
+
+#### Existing Data
+
+Registration prior to creation of data.
+
+#### Explanation of existing data
+
+/
+
+#### Data collection procedures
+
+
+#### Sample size
+
+#### Sample size rationale
+
+#### Stopping rule
+
+### Variables
+
+#### Manipulated variables
+
+#### Measured variables
+
+#### Indices
+
+/
+
+### Analysis Plan
+
+#### Statistical models
+
+#### Transformation
+
+#### Inference criteria
+
+/
+
+#### Data exclusion
+
+Participants flagged as fraudulent respondents, who do not complete the task or who failed manipulation checks will be excluded from our analyses. Participants who present aberrant response time (± 2.5 SD mean) all along the experiment will also be treated as outliers, and excluded from analyses.
+
+#### Missing data
+
+Participants with missing data will be excluded from analyses.
+
+#### Exploratory analysis
+
+### Other
+
+#### Other
+
+#### References
+
+See the references section for the full list of references used in this document. 
