@@ -7,10 +7,11 @@ authors:
     email: a.thebaultguiochon@univ-lyon2.fr
     orcid: 0009-0007-8941-0143
     url: https://emc.univ-lyon2.fr/equipes/neurocognition-criminalite-ncc/thebault-guiochon-astrid
-
 # ─── Format ───
 format: 
  html:
+# ─── Theme ───
+    highlight-style: github
     theme:
       light: "themes/as.scss"
       dark: "themes/as-dark.scss"
@@ -49,6 +50,7 @@ nocite: |
 csl: 
   "references/apa.csl"
 ---
+
 ::: callout-note
 ### Description
 
